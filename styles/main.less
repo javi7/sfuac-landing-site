@@ -1,0 +1,66 @@
+@import "mixins.less";
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Passion+One);
+
+body, html,
+#splash, #splash-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.quote {
+  font-family: "Shadows Into Light Two";
+  font-size: 3em;
+  width: 40%;
+  padding: 10%;
+  min-width: 200px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-shadow: 5px 5px rgba(0,0,0,0.3);
+
+  &:after {
+    content: '"';
+    font-family: "Passion One";
+    font-weight: 300;
+    font-size: 8em;
+    position: absolute;
+    line-height: 0;
+    top: 65%;
+    right: 20%;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+}
+
+#splash {
+  overflow: hidden;
+
+  #splash-image {
+    background: url("../img/backgrounds/main.jpg") center / cover;
+    position: absolute;
+    z-index: -1;
+    .filter(sepia(100%));
+
+    .animate-splash {
+      from {
+        top: 25px;
+        opacity: 0;
+      }
+      to {
+        top: 0px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animate-splash {.animate-splash}
+    @-webkit-keyframes animate-splash {.animate-splash}
+
+    .animation(animate-splash, 2.5s, 1, linear);
+
+  }
+
+
+
+}
