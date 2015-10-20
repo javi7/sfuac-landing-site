@@ -1,5 +1,11 @@
 @import "mixins.less";
-@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Passion+One);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Lato|Passion+One);
+
+@color: #222;
+
+html {
+  font-family: "Lato";
+}
 
 body, html,
 #splash, #splash-image {
@@ -8,30 +14,9 @@ body, html,
   position: relative;
 }
 
-.quote {
-  font-family: "Shadows Into Light Two";
-  font-size: 3em;
-  width: 40%;
-  padding: 10%;
-  min-width: 200px;
-  position: absolute;
-  bottom: 0;
-  color: white;
-  text-shadow: 5px 5px rgba(0,0,0,0.3);
-
-  &:after {
-    content: '"';
-    font-family: "Passion One";
-    font-weight: 300;
-    font-size: 8em;
-    position: absolute;
-    line-height: 0;
-    top: 65%;
-    right: 20%;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
+a {
+  color: @color;
+  text-decoration: none;
 }
 
 #splash {
@@ -60,7 +45,53 @@ body, html,
     .animation(animate-splash, 2.5s, 1, linear);
 
   }
+}
 
+.quote {
+  font-family: "Shadows Into Light Two";
+  font-size: 3em;
+  width: 40%;
+  padding: 10%;
+  min-width: 200px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-shadow: 5px 5px rgba(0,0,0,0.3);
 
+  &:after {
+    content: '"';
+    font-family: "Passion One";
+    font-weight: 300;
+    font-size: 8em;
+    position: absolute;
+    line-height: 0;
+    top: 65%;
+    right: 20%;
+    opacity: 0.5;
+    z-index: -1;
+  }
 
+}
+
+#social {
+  float: right;
+  margin: 1em 1em 0 0;
+
+  a {
+    margin: 0.5em;
+    font-size: 1.5em;
+
+    img {
+      height: 30px;
+    }
+  }
+}
+
+#logo {
+  text-align: center;
+  clear: both;
+
+  img {
+    width: 250px;
+  }
 }
