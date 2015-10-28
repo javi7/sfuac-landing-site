@@ -1,5 +1,5 @@
 @import "mixins.less";
-@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Lato|Passion+One);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Lato:300,400|Passion+One);
 
 @color: #222;
 
@@ -45,53 +45,75 @@ a {
     .animation(animate-splash, 2.5s, 1, linear);
 
   }
-}
 
-.quote {
-  font-family: "Shadows Into Light Two";
-  font-size: 3em;
-  width: 40%;
-  padding: 10%;
-  min-width: 200px;
-  position: absolute;
-  bottom: 0;
-  color: white;
-  text-shadow: 5px 5px rgba(0,0,0,0.3);
+  #social {
+    float: right;
+    margin: 1em 1em 0 0;
 
-  &:after {
-    content: '"';
-    font-family: "Passion One";
-    font-weight: 300;
-    font-size: 8em;
-    position: absolute;
-    line-height: 0;
-    top: 65%;
-    right: 20%;
-    opacity: 0.5;
-    z-index: -1;
-  }
+    a {
+      margin: 0.5em;
+      font-size: 1.5em;
 
-}
-
-#social {
-  float: right;
-  margin: 1em 1em 0 0;
-
-  a {
-    margin: 0.5em;
-    font-size: 1.5em;
-
-    img {
-      height: 30px;
+      img {
+        height: 30px;
+      }
     }
   }
-}
 
-#logo {
-  text-align: center;
-  clear: both;
+  #logo {
+    text-align: center;
+    clear: both;
 
-  img {
-    width: 250px;
+    img {
+      width: 250px;
+    }
+  }
+
+  .content {
+    text-shadow: 5px 5px rgba(0,0,0,0.3);
+    color: white;
+
+    .quote {
+      font-family: "Shadows Into Light Two";
+      font-size: 3em;
+      padding: 10%;
+      min-width: 200px;
+      float:left;
+      position: relative;
+
+      &:after {
+        content: '"';
+        font-family: "Passion One";
+        font-weight: 300;
+        font-size: 8em;
+        position: absolute;
+        line-height: 0;
+        top: 65%;
+        right: 20%;
+        opacity: 0.5;
+        z-index: -1;
+      }
+    }
+
+    #join-link {
+      color: white;
+      float: right;
+      display: block;
+      padding: 2%;
+      margin: 8% 13%;
+      min-width: 200px;
+      text-align: center;
+      font-size: 4em;
+      border: 3px solid white;
+      font-weight: 300;
+      box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      -webkit-transition: background 0.3s;
+
+      &:hover {
+        background: rgba(255,255,255,0.2);
+      }
+    }
   }
 }
